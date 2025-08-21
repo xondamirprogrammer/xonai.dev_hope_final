@@ -10,7 +10,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { ChevronRight, Globe, Brain, Zap, Bot, Cog, Puzzle, Rocket, MessageSquare, Settings, Sparkles, ArrowRight, Menu, X, Eye, Layers, Code, TrendingUp, ChevronDown, Plus, Minus, Phone, Mail, Send } from 'lucide-react';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useNavigate } from 'react-router-dom';
-import { useSEO } from '@/hooks/useSEO';
 
 // --- Placeholder for Supabase Functions ---
 import { submitMainContactForm, submitSmartWebsitesForm, submitAIAgentsForm } from '@/lib/supabase';
@@ -1311,11 +1310,6 @@ function ContactSection() {
 
 // Smart Websites Page Component
 function SmartWebsitesPage({ setCurrentPage }: { setCurrentPage: (page: string) => void }) {
-  useSEO({
-    title: "Smart Website Development | xonai.dev",
-    description: "Get a futuristic, intelligent website with 3D elements and AI-powered automations. We build high-performance sites designed to captivate and convert.",
-  });
-  
   // Scroll to top when component mounts
   React.useEffect(() => {
     window.scrollTo(0, 0);
@@ -1335,11 +1329,6 @@ function SmartWebsitesPage({ setCurrentPage }: { setCurrentPage: (page: string) 
 
 // AI Agents & Chatbots Page Component
 function AIAgentsPage({ setCurrentPage }: { setCurrentPage: (page: string) => void }) {
-  useSEO({
-    title: "Custom AI Agents & Chatbots | xonai.dev",
-    description: "Develop custom GPT-powered AI agents and chatbots trained on your business data. Automate customer support, lead qualification, and more.",
-  });
-
   // Scroll to top when component mounts
   React.useEffect(() => {
     window.scrollTo(0, 0);
@@ -2391,11 +2380,6 @@ function SmartWebsitesContact() {
 
 export default function XonaiWebsite() {
   const [currentPage, setCurrentPage] = useState('home');
-  
-  useSEO({
-    title: "AI Development Agency | Custom GPT Agents & Smart Websites | xonai.dev",
-    description: "Leading AI development agency creating custom GPT agents, intelligent chatbots, and futuristic 3D websites. Expert AI automation solutions that increase efficiency by 300%. Get your AI transformation today.",
-  });
 
   // Effect to apply global styles and fonts for cross-browser consistency
   useEffect(() => {
