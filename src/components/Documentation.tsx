@@ -4,6 +4,12 @@ import { useNavigate } from 'react-router-dom';
 export default function Documentation() {
   const navigate = useNavigate();
 
+  // This useEffect hook will run once when the component loads
+  useEffect(() => {
+    // Scrolls the window to the top left corner (0, 0)
+    window.scrollTo(0, 0);
+  }, []); // The empty array ensures this effect runs only on mount
+
   useEffect(() => {
     // Add Google Fonts
     const link = document.createElement('link');
