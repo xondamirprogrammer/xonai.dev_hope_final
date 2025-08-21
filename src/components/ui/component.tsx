@@ -9,7 +9,6 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { ChevronRight, Globe, Brain, Zap, Bot, Cog, Puzzle, Rocket, MessageSquare, Settings, Sparkles, ArrowRight, Menu, X, Eye, Layers, Code, TrendingUp, ChevronDown, Plus, Minus, Phone, Mail, Send } from 'lucide-react';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { useNavigate } from 'react-router-dom';
 
 // --- Placeholder for Supabase Functions ---
 import { submitMainContactForm, submitSmartWebsitesForm, submitAIAgentsForm } from '@/lib/supabase';
@@ -184,7 +183,7 @@ function ThreeDBackground() {
     particlesRef.current = particles;
 
     const animate = () => {
- ctx.fillStyle = 'rgba(0, 0, 0, 0.05)'; // This is a semi-transparent BLACK
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
       particlesRef.current.forEach(particle => {
@@ -651,7 +650,7 @@ function WhatYouGetSection() {
       icon: <TrendingUp className="w-10 h-10" />,
       title: "Launch & Iterate",
       description: "Fast deployment with continuous improvements",
-              details: "Fast launch with continuous improvements, monitoring, and real-world performance upgrades.",
+            details: "Fast launch with continuous improvements, monitoring, and real-world performance upgrades.",
       color: "from-orange-500 to-red-500",
       step: "04"
     }
@@ -802,11 +801,6 @@ function WhatYouGetSection() {
 
 function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
-  const navigate = useNavigate();
-
-  const handleNavigateToDocs = () => {
-    navigate('/documentation');
-  };
 
   const faqs = [
     {
@@ -1005,7 +999,7 @@ function FAQSection() {
                     Ask a Question
                     <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </Button>
-                  <Button variant="outline" className="group border-primary/30 hover:border-primary/50 hover:bg-primary/5" onClick={handleNavigateToDocs}>
+                  <Button variant="outline" className="group border-primary/30 hover:border-primary/50 hover:bg-primary/5">
                     View Documentation
                     <MessageSquare className="ml-2 h-4 w-4 transition-transform group-hover:scale-110" />
                   </Button>
