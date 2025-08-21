@@ -184,7 +184,7 @@ function ThreeDBackground() {
     particlesRef.current = particles;
 
     const animate = () => {
-      ctx.fillStyle = 'rgba(255, 255, 255, 0.05)'; 
+ ctx.fillStyle = 'rgba(0, 0, 0, 0.05)'; // This is a semi-transparent BLACK
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
       particlesRef.current.forEach(particle => {
