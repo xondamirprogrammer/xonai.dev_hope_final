@@ -11,6 +11,7 @@ import { ChevronRight, Globe, Brain, Zap, Bot, Cog, Puzzle, Rocket, MessageSquar
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { submitMainContactForm, submitSmartWebsitesForm, submitAIAgentsForm } from '@/lib/supabase';
 
+
 interface AnimatedTextCycleProps {
   words: string[];
   interval?: number;
@@ -453,7 +454,7 @@ function Navigation({ setCurrentPage, currentPage }: { setCurrentPage?: (page: s
 
 function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden" style={{ paddingBlock: 'clamp(5rem, 10vh, 8rem)' }}>
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-20">
       <ThreeDBackground />
 
       <div className="relative z-10 container mx-auto px-4 text-center">
@@ -463,7 +464,7 @@ function HeroSection() {
           transition={{ duration: 0.8 }}
           className="max-w-4xl mx-auto"
         >
-          <h1 className="font-bold text-foreground mb-6 leading-tight" style={{ fontSize: 'clamp(2.5rem, 8vw, 4.5rem)' }}>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 leading-tight">
             Build the{" "}
             <AnimatedTextCycle
               words={["future", "impossible", "extraordinary", "intelligent"]}
@@ -473,7 +474,7 @@ function HeroSection() {
             with AI
           </h1>
 
-          <p className="text-muted-foreground mb-8 max-w-2xl mx-auto" style={{ fontSize: 'clamp(1rem, 2.5vw, 1.25rem)' }}>
+          <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
             Transform your business with cutting-edge AI solutions, smart websites, and automation systems that work while you sleep.
           </p>
 
@@ -537,7 +538,7 @@ function ServicesSection({ setCurrentPage }: { setCurrentPage?: (page: string) =
   ];
 
   return (
-    <section id="services" className="relative w-full bg-background" style={{ paddingBlock: 'clamp(5rem, 10vh, 8rem)' }}>
+    <section id="services" className="relative w-full py-20 bg-background">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -546,10 +547,10 @@ function ServicesSection({ setCurrentPage }: { setCurrentPage?: (page: string) =
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="font-bold text-foreground mb-6" style={{ fontSize: 'clamp(2rem, 6vw, 3rem)' }}>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-6">
             Our Services
           </h2>
-          <p className="text-muted-foreground max-w-3xl mx-auto" style={{ fontSize: 'clamp(1rem, 2.5vw, 1.125rem)' }}>
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
             Comprehensive AI solutions designed to transform your business operations and accelerate growth.
           </p>
         </motion.div>
@@ -647,14 +648,14 @@ function WhatYouGetSection() {
       icon: <TrendingUp className="w-10 h-10" />,
       title: "Launch & Iterate",
       description: "Fast deployment with continuous improvements",
-      details: "Fast launch with continuous improvements, monitoring, and real-world performance upgrades.",
+            details: "Fast launch with continuous improvements, monitoring, and real-world performance upgrades.",
       color: "from-orange-500 to-red-500",
       step: "04"
     }
   ];
 
   return (
-    <section id="process" className="relative w-full bg-gradient-to-b from-background via-muted/20 to-background overflow-hidden" style={{ paddingBlock: 'clamp(5rem, 10vh, 8rem)' }}>
+    <section id="process" className="relative w-full py-20 md:py-32 bg-gradient-to-b from-background via-muted/20 to-background overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-20 left-10 w-64 h-64 bg-blue-500/5 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute top-40 right-20 w-80 h-80 bg-purple-500/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
@@ -676,10 +677,10 @@ function WhatYouGetSection() {
             <Sparkles className="w-4 h-4 text-primary mr-2" />
             <span className="text-sm font-medium text-primary">Our Process</span>
           </div>
-          <h2 className="font-bold text-foreground mb-6 bg-gradient-to-r from-foreground via-primary to-foreground bg-clip-text" style={{ fontSize: 'clamp(2rem, 6vw, 3rem)' }}>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 bg-gradient-to-r from-foreground via-primary to-foreground bg-clip-text">
             What You Get
           </h2>
-          <p className="text-muted-foreground max-w-3xl mx-auto leading-relaxed" style={{ fontSize: 'clamp(1rem, 2.5vw, 1.125rem)' }}>
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             A proven methodology that transforms your vision into reality with precision engineering,
             cutting-edge technology, and continuous innovation at every step.
           </p>
@@ -835,7 +836,7 @@ function FAQSection() {
   };
 
   return (
-    <section id="faq" className="relative w-full bg-gradient-to-b from-background via-muted/5 to-background overflow-hidden" style={{ paddingBlock: 'clamp(5rem, 10vh, 8rem)' }}>
+    <section id="faq" className="relative w-full py-20 md:py-32 bg-gradient-to-b from-background via-muted/5 to-background overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-20 left-10 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute top-60 right-20 w-80 h-80 bg-purple-500/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
@@ -866,14 +867,14 @@ function FAQSection() {
             <span className="text-sm font-semibold text-primary tracking-wide uppercase">Frequently Asked Questions</span>
             <div className="ml-3 w-2 h-2 bg-primary rounded-full animate-pulse"></div>
           </div>
-          <h2 className="font-bold text-foreground mb-8 leading-tight" style={{ fontSize: 'clamp(2.5rem, 7vw, 4rem)' }}>
+          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-foreground mb-8 leading-tight">
             Got Questions?
             <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-400">
               We've Got Answers
             </span>
           </h2>
-          <p className="text-muted-foreground max-w-4xl mx-auto leading-relaxed" style={{ fontSize: 'clamp(1rem, 2.5vw, 1.125rem)' }}>
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
             Everything you need to know about our AI solutions, development process, and how we can transform your business with intelligent automation.
           </p>
         </motion.div>
@@ -1066,7 +1067,7 @@ function ContactSection() {
   };
 
   return (
-    <section id="contact" className="relative w-full bg-gradient-to-b from-background via-muted/10 to-background/50 overflow-hidden" style={{ paddingBlock: 'clamp(5rem, 10vh, 8rem)' }}>
+    <section id="contact" className="relative w-full py-20 md:py-32 bg-gradient-to-b from-background via-muted/10 to-background/50 overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-20 left-10 w-80 h-80 bg-blue-500/3 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute top-40 right-20 w-96 h-96 bg-purple-500/3 rounded-full blur-3xl animate-pulse delay-1000"></div>
@@ -1098,13 +1099,13 @@ function ContactSection() {
             <span className="text-sm font-semibold text-primary tracking-wide uppercase">Get In Touch</span>
             <div className="ml-3 w-2 h-2 bg-primary rounded-full animate-pulse"></div>
           </div>
-          <h2 className="font-bold text-foreground mb-6 leading-tight" style={{ fontSize: 'clamp(2rem, 6vw, 3rem)' }}>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
             Let's build something{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-400">
               smart
             </span>{" "}
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed" style={{ fontSize: 'clamp(1rem, 2.5vw, 1.125rem)' }}>
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Tell us what you need, and we'll get back to you.
           </p>
         </motion.div>
@@ -1356,13 +1357,13 @@ function AIAgentsHero() {
             <div className="ml-3 w-2 h-2 bg-purple-400 rounded-full animate-pulse"></div>
           </div>
 
-          <h1 className="font-bold text-foreground mb-6 leading-tight" style={{ fontSize: 'clamp(2.5rem, 7vw, 4rem)' }}>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-purple-400">
               AI Agents & Chatbots
             </span>
           </h1>
 
-          <p className="text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed" style={{ fontSize: 'clamp(1rem, 2.5vw, 1.25rem)' }}>
+          <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
             Custom GPT-powered bots that talk, think, and take action.
           </p>
 
@@ -1417,7 +1418,7 @@ function AIAgentsHero() {
 // Why This Matters Section
 function WhyThisMatters() {
   return (
-    <section id="why-this-matters" className="relative bg-gradient-to-b from-background via-muted/10 to-background overflow-hidden" style={{ paddingBlock: 'clamp(5rem, 10vh, 8rem)' }}>
+    <section id="why-this-matters" className="relative py-20 md:py-32 bg-gradient-to-b from-background via-muted/10 to-background overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-20 left-10 w-80 h-80 bg-purple-500/5 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
@@ -1431,10 +1432,10 @@ function WhyThisMatters() {
           viewport={{ once: true }}
           className="text-center mb-20"
         >
-          <h2 className="font-bold text-foreground mb-6" style={{ fontSize: 'clamp(2rem, 6vw, 3rem)' }}>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
             Smarter Conversations. <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500">Real Results.</span>
           </h2>
-          <p className="text-muted-foreground max-w-4xl mx-auto leading-relaxed" style={{ fontSize: 'clamp(1rem, 2.5vw, 1.125rem)' }}>
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
             We build bots that actually understand your business — answering questions, qualifying leads, and automating workflows with precision. No canned responses. Just intelligent automation tailored to your brand.
           </p>
         </motion.div>
@@ -1474,7 +1475,7 @@ function AIAgentsIncluded() {
   ];
 
   return (
-    <section id="whats-included" className="relative bg-gradient-to-b from-background via-muted/5 to-background overflow-hidden" style={{ paddingBlock: 'clamp(5rem, 10vh, 8rem)' }}>
+    <section id="whats-included" className="relative py-20 md:py-32 bg-gradient-to-b from-background via-muted/5 to-background overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -1483,10 +1484,10 @@ function AIAgentsIncluded() {
           viewport={{ once: true }}
           className="text-center mb-20"
         >
-          <h2 className="font-bold text-foreground mb-6" style={{ fontSize: 'clamp(2rem, 6vw, 3rem)' }}>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
             What's <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500">Included</span>
           </h2>
-          <p className="text-muted-foreground max-w-3xl mx-auto leading-relaxed" style={{ fontSize: 'clamp(1rem, 2.5vw, 1.125rem)' }}>
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Everything you need for intelligent automation that understands your business and converts visitors into customers.
           </p>
         </motion.div>
@@ -1557,12 +1558,12 @@ function AIAgentsPerfectFor() {
       title: "Marketplaces",
       description: "Help customers navigate and convert faster.",
       color: "from-blue-500 to-purple-500",
-      emoji: "🛒"
+      emoji: "?️"
     }
   ];
 
   return (
-    <section id="perfect-for" className="relative bg-gradient-to-b from-background via-muted/10 to-background overflow-hidden" style={{ paddingBlock: 'clamp(5rem, 10vh, 8rem)' }}>
+    <section id="perfect-for" className="relative py-20 md:py-32 bg-gradient-to-b from-background via-muted/10 to-background overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-40 left-20 w-72 h-72 bg-purple-500/5 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-40 right-20 w-80 h-80 bg-pink-500/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
@@ -1577,10 +1578,10 @@ function AIAgentsPerfectFor() {
           viewport={{ once: true }}
           className="text-center mb-20"
         >
-          <h2 className="font-bold text-foreground mb-6" style={{ fontSize: 'clamp(2rem, 6vw, 3rem)' }}>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
             Perfect <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500">For</span>
           </h2>
-          <p className="text-muted-foreground max-w-3xl mx-auto leading-relaxed" style={{ fontSize: 'clamp(1rem, 2.5vw, 1.125rem)' }}>
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             AI agents designed for businesses that want to automate intelligently and scale efficiently.
           </p>
         </motion.div>
@@ -1680,7 +1681,7 @@ function AIAgentsContact() {
   };
 
   return (
-    <section id="ai-agents-contact" className="relative bg-gradient-to-b from-background via-muted/10 to-background/50 overflow-hidden" style={{ paddingBlock: 'clamp(5rem, 10vh, 8rem)' }}>
+    <section id="ai-agents-contact" className="relative py-20 md:py-32 bg-gradient-to-b from-background via-muted/10 to-background/50 overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-20 left-10 w-80 h-80 bg-purple-500/3 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute top-40 right-20 w-96 h-96 bg-pink-500/3 rounded-full blur-3xl animate-pulse delay-1000"></div>
@@ -1712,10 +1713,10 @@ function AIAgentsContact() {
             <span className="text-sm font-semibold text-purple-400 tracking-wide uppercase">Start Your AI Project</span>
             <div className="ml-3 w-2 h-2 bg-purple-400 rounded-full animate-pulse"></div>
           </div>
-          <h2 className="font-bold text-foreground mb-6 leading-tight" style={{ fontSize: 'clamp(2rem, 6vw, 3rem)' }}>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
             Start Your AI Project
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed" style={{ fontSize: 'clamp(1rem, 2.5vw, 1.125rem)' }}>
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Tell us about your goals and we'll get in touch within 12h.
           </p>
         </motion.div>
@@ -1849,13 +1850,13 @@ function SmartWebsitesHero() {
             <div className="ml-3 w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
           </div>
 
-          <h1 className="font-bold text-foreground mb-6 leading-tight" style={{ fontSize: 'clamp(2.5rem, 7vw, 4rem)' }}>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-400">
               Smart Websites
             </span>
           </h1>
 
-          <p className="text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed" style={{ fontSize: 'clamp(1rem, 2.5vw, 1.25rem)' }}>
+          <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
             Beautiful, modern websites built with intelligence and style. We create digital experiences that don't just look amazing—they work smarter.
           </p>
 
@@ -1917,7 +1918,7 @@ function WhySmartWebsites() {
   ];
 
   return (
-    <section id="why-smart-websites" className="relative bg-gradient-to-b from-background via-muted/10 to-background overflow-hidden" style={{ paddingBlock: 'clamp(5rem, 10vh, 8rem)' }}>
+    <section id="why-smart-websites" className="relative py-20 md:py-32 bg-gradient-to-b from-background via-muted/10 to-background overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-20 left-10 w-80 h-80 bg-blue-500/5 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
@@ -1931,10 +1932,10 @@ function WhySmartWebsites() {
           viewport={{ once: true }}
           className="text-center mb-20"
         >
-          <h2 className="font-bold text-foreground mb-6" style={{ fontSize: 'clamp(2rem, 6vw, 3rem)' }}>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
             Why <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">Smart</span> Websites?
           </h2>
-          <p className="text-muted-foreground max-w-3xl mx-auto leading-relaxed" style={{ fontSize: 'clamp(1rem, 2.5vw, 1.125rem)' }}>
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             We don't just build websites—we engineer digital experiences that work intelligently for your business.
           </p>
         </motion.div>
@@ -2012,7 +2013,7 @@ function WhatsIncluded() {
   ];
 
   return (
-    <section id="whats-included" className="relative bg-gradient-to-b from-background via-muted/5 to-background overflow-hidden" style={{ paddingBlock: 'clamp(5rem, 10vh, 8rem)' }}>
+    <section id="whats-included" className="relative py-20 md:py-32 bg-gradient-to-b from-background via-muted/5 to-background overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -2021,10 +2022,10 @@ function WhatsIncluded() {
           viewport={{ once: true }}
           className="text-center mb-20"
         >
-          <h2 className="font-bold text-foreground mb-6" style={{ fontSize: 'clamp(2rem, 6vw, 3rem)' }}>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
             What's <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">Included</span>
           </h2>
-          <p className="text-muted-foreground max-w-3xl mx-auto leading-relaxed" style={{ fontSize: 'clamp(1rem, 2.5vw, 1.125rem)' }}>
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Everything you need for a professional, high-converting website that works intelligently.
           </p>
         </motion.div>
@@ -2100,7 +2101,7 @@ function PerfectFor() {
   ];
 
   return (
-    <section id="perfect-for" className="relative bg-gradient-to-b from-background via-muted/10 to-background overflow-hidden" style={{ paddingBlock: 'clamp(5rem, 10vh, 8rem)' }}>
+    <section id="perfect-for" className="relative py-20 md:py-32 bg-gradient-to-b from-background via-muted/10 to-background overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-40 left-20 w-72 h-72 bg-blue-500/5 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-40 right-20 w-80 h-80 bg-purple-500/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
@@ -2115,10 +2116,10 @@ function PerfectFor() {
           viewport={{ once: true }}
           className="text-center mb-20"
         >
-          <h2 className="font-bold text-foreground mb-6" style={{ fontSize: 'clamp(2rem, 6vw, 3rem)' }}>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
             Perfect <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-pink-500">For</span>
           </h2>
-          <p className="text-muted-foreground max-w-3xl mx-auto leading-relaxed" style={{ fontSize: 'clamp(1rem, 2.5vw, 1.125rem)' }}>
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Smart websites designed for businesses that want to grow intelligently and efficiently.
           </p>
         </motion.div>
@@ -2158,6 +2159,74 @@ function PerfectFor() {
             </motion.div>
           ))}
         </div>
+      </div>
+    </section>
+  );
+}
+
+// Smart Websites CTA Section
+function SmartWebsitesCTA() {
+  return (
+    <section className="relative py-20 md:py-32 bg-gradient-to-b from-background via-muted/5 to-background overflow-hidden">
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-20 left-10 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-10 w-80 h-80 bg-purple-500/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.01)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.01)_1px,transparent_1px)] bg-[size:100px_100px]"></div>
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-center max-w-4xl mx-auto"
+        >
+          <Card className="relative bg-gradient-to-r from-card/60 via-card/40 to-card/60 backdrop-blur-xl border-border/40 p-8 sm:p-12 hover:border-primary/40 transition-all duration-500 group overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-purple-500/5 to-cyan-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+            <div className="relative z-10">
+              <div className="flex items-center justify-center space-x-4 mb-8">
+                <div className="w-3 h-3 bg-blue-500 rounded-full animate-pulse"></div>
+                <div className="w-3 h-3 bg-purple-500 rounded-full animate-pulse delay-300"></div>
+                <div className="w-3 h-3 bg-cyan-500 rounded-full animate-pulse delay-700"></div>
+              </div>
+
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-6 leading-tight">
+                We don't just build websites —{" "}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-400">
+                  we build smart systems
+                </span>{" "}
+                that work for you.
+              </h2>
+
+              <p className="text-lg sm:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto leading-relaxed">
+                Ready to transform your online presence with intelligent design and automation?
+                Let's create something extraordinary together.
+              </p>
+
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+                <Button
+                  size="lg"
+                  className="group bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white shadow-xl hover:shadow-2xl transition-all duration-300 px-10 py-4"
+                  onClick={() => {
+                    const contactElement = document.getElementById('smart-websites-contact');
+                    if (contactElement) {
+                      contactElement.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  }}
+                >
+                  Get a Free Demo
+                  <Sparkles className="ml-2 h-5 w-5 transition-transform group-hover:scale-110" />
+                </Button>
+                <Button variant="outline" size="lg" className="group border-primary/30 hover:border-primary/50 hover:bg-primary/5 px-10 py-4">
+                  View Case Studies
+                  <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                </Button>
+              </div>
+            </div>
+          </Card>
+        </motion.div>
       </div>
     </section>
   );
@@ -2219,7 +2288,7 @@ function SmartWebsitesContact() {
   };
 
   return (
-    <section id="smart-websites-contact" className="relative bg-gradient-to-b from-background via-muted/10 to-background/50 overflow-hidden" style={{ paddingBlock: 'clamp(5rem, 10vh, 8rem)' }}>
+    <section id="smart-websites-contact" className="relative py-20 md:py-32 bg-gradient-to-b from-background via-muted/10 to-background/50 overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-20 left-10 w-80 h-80 bg-blue-500/3 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute top-40 right-20 w-96 h-96 bg-purple-500/3 rounded-full blur-3xl animate-pulse delay-1000"></div>
@@ -2251,7 +2320,7 @@ function SmartWebsitesContact() {
             <span className="text-sm font-semibold text-blue-400 tracking-wide uppercase">Start Your Project</span>
             <div className="ml-3 w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
           </div>
-          <h2 className="font-bold text-foreground mb-6 leading-tight" style={{ fontSize: 'clamp(2rem, 5vw, 3rem)' }}>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
             Tell us what you need, and we'll get back{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-400">
               within 24 hours.
