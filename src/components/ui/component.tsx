@@ -9,10 +9,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { ChevronRight, Globe, Brain, Zap, Bot, Cog, Puzzle, Rocket, MessageSquare, Settings, Sparkles, ArrowRight, Menu, X, Eye, Layers, Code, TrendingUp, ChevronDown, Plus, Minus, Phone, Mail, Send } from 'lucide-react';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-
-// --- Placeholder for Supabase Functions ---
 import { submitMainContactForm, submitSmartWebsitesForm, submitAIAgentsForm } from '@/lib/supabase';
-
 
 interface AnimatedTextCycleProps {
   words: string[];
@@ -650,7 +647,7 @@ function WhatYouGetSection() {
       icon: <TrendingUp className="w-10 h-10" />,
       title: "Launch & Iterate",
       description: "Fast deployment with continuous improvements",
-            details: "Fast launch with continuous improvements, monitoring, and real-world performance upgrades.",
+      details: "Fast launch with continuous improvements, monitoring, and real-world performance upgrades.",
       color: "from-orange-500 to-red-500",
       step: "04"
     }
@@ -1588,7 +1585,7 @@ function AIAgentsPerfectFor() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
           {clientTypes.map((client, index) => (
             <motion.div
               key={index}
