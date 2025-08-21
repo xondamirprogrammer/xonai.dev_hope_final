@@ -13,6 +13,10 @@ export default function Documentation() {
     };
   }, []);
 
+  const navigateToHome = () => {
+    window.location.href = '/';
+  };
+
   return (
     <>
       <style>{`
@@ -134,6 +138,10 @@ export default function Documentation() {
         .logo-text {
             font-size: 20px;
             font-weight: bold;
+            cursor: pointer;
+        }
+        .logo-box {
+            cursor: pointer;
         }
 
         /* Page Specific Styles */
@@ -217,6 +225,15 @@ export default function Documentation() {
         }
         .contact-info h3 {
             margin-bottom: 4px;
+        }
+        
+        /* Clickable elements */
+        .clickable {
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+        }
+        .clickable:hover {
+            opacity: 0.8;
         }
 
         /* Responsive adjustments for smaller screens */
