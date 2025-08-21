@@ -35,7 +35,7 @@ export default function Documentation() {
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 20px;
+            padding: clamp(1rem, 5vw, 2rem);
             margin: 0;
             box-sizing: border-box;
             min-height: 100vh;
@@ -48,12 +48,12 @@ export default function Documentation() {
             font-family: 'Inter', sans-serif;
             border: 1px solid #333;
             margin-bottom: 40px;
-            padding: 40px;
+            padding: clamp(1.5rem, 5vw, 2.5rem);
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
             border-radius: 8px;
             display: flex;
             flex-direction: column;
-            width: 100%; 
+            width: 95%; 
             max-width: 820px;
             position: relative;
             overflow: hidden;
@@ -79,10 +79,26 @@ export default function Documentation() {
             font-weight: 700;
             color: #FFFFFF;
         }
-        .page h1 { font-size: 48px; margin-bottom: 16px; line-height: 1.2; }
-        .page h2 { font-size: 32px; margin-bottom: 24px; border-bottom: 2px solid #333; padding-bottom: 12px; }
-        .page h3 { font-size: 20px; margin-bottom: 8px; }
-        .page p { font-size: 16px; line-height: 1.6; color: #B0B0B0; }
+        .page h1 { 
+            font-size: clamp(2.25rem, 5vw + 1rem, 3rem); 
+            margin-bottom: 16px; 
+            line-height: 1.2; 
+        }
+        .page h2 { 
+            font-size: clamp(1.75rem, 4vw + 0.5rem, 2rem); 
+            margin-bottom: 24px; 
+            border-bottom: 2px solid #333; 
+            padding-bottom: 12px; 
+        }
+        .page h3 { 
+            font-size: clamp(1.1rem, 3vw, 1.25rem); 
+            margin-bottom: 8px; 
+        }
+        .page p { 
+            font-size: clamp(0.9rem, 2vw, 1rem); 
+            line-height: 1.6; 
+            color: #B0B0B0; 
+        }
         .page ul { list-style-type: none; padding-left: 0; }
         .page li { margin-bottom: 12px; display: flex; align-items: flex-start; }
         .page li::before { content: '✓'; color: #8A2BE2; font-size: 20px; margin-right: 12px; }
@@ -113,6 +129,8 @@ export default function Documentation() {
             padding-bottom: 20px;
             border-bottom: 1px solid #333;
             margin-bottom: 40px;
+            flex-wrap: wrap;
+            gap: 20px;
         }
         .footer {
             margin-top: auto;
@@ -124,6 +142,8 @@ export default function Documentation() {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
         }
 
         /* Logo Styles */
@@ -156,8 +176,8 @@ export default function Documentation() {
             text-align: center;
             min-height: 80vh;
         }
-        .cover-page h1 { font-size: 64px; }
-        .cover-page p { font-size: 20px; color: #E0E0E0; }
+        .cover-page h1 { font-size: clamp(2.5rem, 10vw, 4rem); }
+        .cover-page p { font-size: clamp(1rem, 4vw, 1.25rem); color: #E0E0E0; }
 
         /* Component Styles */
         .service-card {
@@ -173,7 +193,7 @@ export default function Documentation() {
             margin-bottom: 24px;
         }
         .step-number {
-            font-size: 48px;
+            font-size: clamp(2.5rem, 8vw, 3rem);
             font-weight: bold;
             color: rgba(255, 255, 255, 0.15);
             margin-right: 20px;
@@ -181,7 +201,7 @@ export default function Documentation() {
         }
         .pricing-table {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
             margin-top: 20px;
         }
@@ -242,23 +262,15 @@ export default function Documentation() {
         }
 
         /* Responsive adjustments for smaller screens */
-        @media (max-width: 768px) {
-            .documentation-body {
-                padding: 10px;
-            }
-            .page {
-                padding: 20px;
-            }
-            .page h1 { font-size: 36px; }
-            .cover-page h1 { font-size: 48px; }
-            .page h2 { font-size: 28px; }
-            .pricing-table {
-                grid-template-columns: 1fr;
-            }
+        @media (max-width: 640px) {
             .header {
                 flex-direction: column;
-                gap: 10px;
-                margin-bottom: 20px;
+                align-items: flex-start;
+                gap: 15px;
+            }
+            .footer {
+                flex-direction: column;
+                gap: 15px;
             }
         }
       `}</style>
