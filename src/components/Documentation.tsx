@@ -141,10 +141,6 @@ export default function Documentation() {
         .logo-text {
             font-size: 20px;
             font-weight: bold;
-            cursor: pointer;
-        }
-        .logo-box {
-            cursor: pointer;
         }
 
         /* Page Specific Styles */
@@ -204,7 +200,7 @@ export default function Documentation() {
             color: #B0B0B0;
             margin-bottom: 24px;
         }
-        
+       
         .contact-info {
             list-style-type: none;
             padding: 0;
@@ -229,7 +225,7 @@ export default function Documentation() {
         .contact-info h3 {
             margin-bottom: 4px;
         }
-        
+       
         /* Clickable elements */
         .clickable {
             cursor: pointer;
@@ -265,7 +261,7 @@ export default function Documentation() {
         {/* Page 1: Cover Page */}
         <div className="page cover-page">
           <div style={{ textAlign: 'center' }}>
-            <div className="logo" style={{ justifyContent: 'center', marginBottom: '40px' }}>
+            <div className="logo clickable" onClick={navigateToHome} style={{ justifyContent: 'center', marginBottom: '40px' }}>
               <div className="logo-box" style={{ width: '80px', height: '80px', borderRadius: '12px', fontSize: '36px' }}>X</div>
             </div>
             <h1>Build the <span className="gradient-text">Future</span> with AI</h1>
@@ -277,7 +273,7 @@ export default function Documentation() {
         {/* Page 2: Introduction */}
         <div className="page">
           <div className="header">
-            <div className="logo">
+            <div className="logo clickable" onClick={navigateToHome}>
               <div className="logo-box">X</div>
               <div className="logo-text">xonai.dev</div>
             </div>
@@ -301,7 +297,7 @@ export default function Documentation() {
         {/* Page 3: Our Services */}
         <div className="page">
           <div className="header">
-            <div className="logo">
+            <div className="logo clickable" onClick={navigateToHome}>
               <div className="logo-box">X</div>
               <div className="logo-text">xonai.dev</div>
             </div>
@@ -344,7 +340,7 @@ export default function Documentation() {
         {/* Page 4: Our Process */}
         <div className="page">
           <div className="header">
-            <div className="logo">
+            <div className="logo clickable" onClick={navigateToHome}>
               <div className="logo-box">X</div>
               <div className="logo-text">xonai.dev</div>
             </div>
@@ -391,7 +387,7 @@ export default function Documentation() {
         {/* Page 5: Pricing */}
         <div className="page">
           <div className="header">
-            <div className="logo">
+            <div className="logo clickable" onClick={navigateToHome}>
               <div className="logo-box">X</div>
               <div className="logo-text">xonai.dev</div>
             </div>
@@ -435,7 +431,7 @@ export default function Documentation() {
         {/* Page 6: Contact */}
         <div className="page">
           <div className="header">
-            <div className="logo">
+            <div className="logo clickable" onClick={navigateToHome}>
               <div className="logo-box">X</div>
               <div className="logo-text">xonai.dev</div>
             </div>
