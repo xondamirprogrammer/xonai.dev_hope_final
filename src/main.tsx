@@ -10,8 +10,6 @@ function AppWithDarkMode() {
     // Add dark class to html element and ensure it stays
     document.documentElement.classList.add('dark');
     document.documentElement.style.colorScheme = 'dark';
-    document.documentElement.style.backgroundColor = '#0a0a0a';
-    document.body.style.backgroundColor = '#0a0a0a';
     
     // Remove any light mode classes that might exist
     document.documentElement.classList.remove('light');
@@ -25,8 +23,6 @@ function AppWithDarkMode() {
           }
           document.documentElement.classList.remove('light');
         }
-        document.documentElement.style.backgroundColor = '#0a0a0a';
-        document.body.style.backgroundColor = '#0a0a0a';
       });
     });
     
