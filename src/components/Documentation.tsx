@@ -1,6 +1,9 @@
 import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export default function Documentation() {
+  const navigate = useNavigate();
+
   useEffect(() => {
     // Add Google Fonts
     const link = document.createElement('link');
@@ -14,7 +17,7 @@ export default function Documentation() {
   }, []);
 
   const navigateToHome = () => {
-    window.location.href = '/';
+    navigate('/');
   };
 
   return (
