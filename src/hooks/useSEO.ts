@@ -13,23 +13,23 @@ interface SEOConfig {
 }
 
 const defaultSEO: SEOConfig = {
-  title: 'xonai.dev - AI Solutions & Smart Website Development | Build the Future with AI',
-  description: 'Transform your business with cutting-edge AI solutions, smart websites, and automation systems. We build custom AI agents, futuristic websites, and intelligent automation tools that work 24/7.',
-  keywords: 'AI development, smart websites, AI agents, chatbots, automation, custom AI solutions, GPT integration, 3D websites, React development, business automation',
+  title: 'AI Development Agency | Custom GPT Agents & Smart Websites | xonai.dev',
+  description: 'Leading AI development agency creating custom GPT agents, intelligent chatbots, and futuristic 3D websites. Expert AI automation solutions that increase efficiency by 300%. Get your AI transformation today.',
+  keywords: 'AI development agency, custom GPT agents, AI chatbot development, business automation solutions, 3D interactive websites, intelligent web applications, AI workflow automation, custom AI tools, machine learning integration, conversational AI, AI agent training, smart website development, React AI applications, AI-powered business tools, automated lead generation, AI customer service',
   canonical: 'https://xonai.dev',
 };
 
 const pageSEO: Record<string, SEOConfig> = {
   '/': {
-    title: 'xonai.dev - Build the Future with AI Solutions & Smart Websites',
-    description: 'Transform your business with cutting-edge AI solutions, smart websites, and automation systems. Custom AI agents and futuristic web development that works 24/7.',
-    keywords: 'AI development, smart websites, AI agents, chatbots, automation, custom AI solutions, GPT integration, 3D websites, React development, business automation',
+    title: 'AI Development Agency | Custom GPT Agents & Smart Websites | xonai.dev',
+    description: 'Leading AI development agency creating custom GPT agents, intelligent chatbots, and futuristic 3D websites. Expert AI automation solutions that increase efficiency by 300%. Get your AI transformation today.',
+    keywords: 'AI development agency, custom GPT agents, AI chatbot development, business automation solutions, 3D interactive websites, intelligent web applications, AI workflow automation, custom AI tools, machine learning integration, conversational AI, AI agent training, smart website development, React AI applications, AI-powered business tools, automated lead generation, AI customer service',
     canonical: 'https://xonai.dev',
   },
   '/documentation': {
-    title: 'xonai.dev - Company Documentation & Services Brochure',
-    description: 'Comprehensive documentation of xonai.dev services including AI agent development, smart websites, automation systems, pricing, and our proven process.',
-    keywords: 'xonai.dev documentation, AI services brochure, company information, pricing, AI development process, service documentation',
+    title: 'AI Development Services Documentation | Pricing & Process Guide | xonai.dev',
+    description: 'Complete guide to xonai.dev AI development services. Learn about custom GPT agents, smart website development, pricing, our proven 4-step process, and how we increase business efficiency by 300%.',
+    keywords: 'AI development services documentation, custom GPT agent pricing, AI chatbot development process, smart website development guide, business automation services, AI development agency portfolio, xonai.dev services, AI transformation consultation, intelligent automation solutions',
     canonical: 'https://xonai.dev/documentation',
   },
 };

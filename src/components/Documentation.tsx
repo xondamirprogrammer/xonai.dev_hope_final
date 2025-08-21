@@ -7,9 +7,9 @@ export default function Documentation() {
   
   // SEO for documentation page
   useSEO({
-    title: 'xonai.dev - Company Documentation & Services Brochure',
-    description: 'Comprehensive documentation of xonai.dev services including AI agent development, smart websites, automation systems, pricing, and our proven process.',
-    keywords: 'xonai.dev documentation, AI services brochure, company information, pricing, AI development process, service documentation',
+    title: 'AI Development Services Documentation | Pricing & Process Guide | xonai.dev',
+    description: 'Complete guide to xonai.dev AI development services. Learn about custom GPT agents, smart website development, pricing, our proven 4-step process, and how we increase business efficiency by 300%.',
+    keywords: 'AI development services documentation, custom GPT agent pricing, AI chatbot development process, smart website development guide, business automation services, AI development agency portfolio, xonai.dev services, AI transformation consultation, intelligent automation solutions',
   });
 
   // This useEffect hook will run once when the component loads
@@ -47,6 +47,10 @@ export default function Documentation() {
             margin: 0;
             box-sizing: border-box;
             min-height: 100vh;
+            font-display: swap;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
 
         /* Page Container Styles */
@@ -66,6 +70,8 @@ export default function Documentation() {
             position: relative;
             overflow: hidden;
             box-sizing: border-box;
+            will-change: transform;
+            contain: layout style paint;
         }
 
         /* Grid background effect */
