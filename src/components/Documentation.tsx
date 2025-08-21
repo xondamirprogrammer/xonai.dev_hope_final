@@ -1,8 +1,16 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useSEO } from '../hooks/useSEO';
 
 export default function Documentation() {
   const navigate = useNavigate();
+  
+  // SEO for documentation page
+  useSEO({
+    title: 'xonai.dev - Company Documentation & Services Brochure',
+    description: 'Comprehensive documentation of xonai.dev services including AI agent development, smart websites, automation systems, pricing, and our proven process.',
+    keywords: 'xonai.dev documentation, AI services brochure, company information, pricing, AI development process, service documentation',
+  });
 
   // This useEffect hook will run once when the component loads
   useEffect(() => {
