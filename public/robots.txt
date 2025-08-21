@@ -1,28 +1,15 @@
 User-agent: *
 Allow: /
-Crawl-delay: 1
 
 # Sitemap location
 Sitemap: https://xonai.dev/sitemap.xml
 
-# Google-specific sitemap
-Sitemap: https://xonai.dev/sitemap.xml
-
-# Specific bot instructions
-User-agent: Googlebot
-Allow: /
-Crawl-delay: 0
-
-User-agent: Bingbot
-Allow: /
-Crawl-delay: 1
-
-User-agent: Slurp
-Allow: /
+# Crawl-delay for respectful crawling
 Crawl-delay: 1
 
 # Block access to development files
 Disallow: /src/
+Disallow: /*.json
 Disallow: /node_modules/
 Disallow: /build/
 Disallow: /dist/
